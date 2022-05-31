@@ -30,7 +30,7 @@ const Navbar = ({ BurgerColour }) => {
       <nav>
         {/* LOGO */}
         <div className={styles.brand_logo}>
-          <Link to="/">Real</Link>
+          <Link to="/">Sadguru Homes</Link>
         </div>
 
         {/* NAV BURGER */}

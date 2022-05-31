@@ -45,7 +45,7 @@ const Section2 = () => {
         <div className={styles.sell}>
           <h3>Sell a home</h3>
           <p>
-            Wether you get a cash offer through Real Offers or choose to sell
+            Wether you get a cash offer through Sadguru Homes Offers or choose to sell
             traditionally, we can help you navigate a successfull sale.
           </p>
           <ArrowButton text={"Use Filters"} path="search" />

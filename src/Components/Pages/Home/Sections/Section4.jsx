@@ -21,7 +21,7 @@ const Section4 = () => {
         <div className={styles.info}>
           <p>
             Search and find your Dream House at affordable prices, but with best
-            Quality. Only Available at Real!
+            Quality. Only Available at Sadguru Homes!
           </p>
 
           <div className={styles.rows}>

@@ -27,7 +27,7 @@ const Section1 = () => {
           <h1>Easy way to find your Dream House</h1>
           <p>
             Search and find your dream house at affordable prices, but with the
-            best quality. Only Availble at Real
+            best quality. Only Availble at Sadguru Homes
           </p>
 
           {/* SearchBox */}
