@@ -16,19 +16,30 @@ const Footer = () => {
           <span>Sadguru Homes</span>
         </li>
         <li>
-          <span>Our Location</span>
+          <span>Mundra, Gujarat, India 370421</span>
         </li>
         <li>
-          <span>Call us: +91 70213 35650</span>
+          <span>Call us: +91 98253 04952</span>
+        </li>
+        <li>
+          <span>Jadeja Dharmendrasinh</span>
         </li>
         <li>
           <div className={styles.socials}>
-            <Link to="/">
+            <a
+              href="https://www.instagram.com/sadguru_homes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiOutlineInstagram />
-            </Link>
-            <Link to="/">
+            </a>
+            <a
+              href="https://www.facebook.com/Sadguru-Homes-103064972414079/?ref=page_internal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiOutlineFacebook />
-            </Link>
+            </a>
             <Link to="/">
               <AiOutlineTwitter />
             </Link>

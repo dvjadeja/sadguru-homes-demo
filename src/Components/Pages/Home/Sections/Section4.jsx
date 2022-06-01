@@ -29,13 +29,13 @@ const Section4 = () => {
             <div className={styles.row_1}>
               {/* FACT1 */}
               <div className={styles.fact}>
-                <h2>10.234</h2>
+                <h2>10,234</h2>
                 <h3>Completed Houses</h3>
               </div>
 
               {/* FACT2 */}
               <div className={styles.fact}>
-                <h2>11.234</h2>
+                <h2>11,234</h2>
                 <h3>Rented Houses</h3>
               </div>
             </div>
@@ -44,13 +44,13 @@ const Section4 = () => {
             <div className={styles.row_1}>
               {/* FACT1 */}
               <div className={styles.fact}>
-                <h2>2.157</h2>
+                <h2>2,157</h2>
                 <h3>Sold Houses</h3>
               </div>
 
               {/* FACT2 */}
               <div className={styles.fact}>
-                <h2>12.157</h2>
+                <h2>1,2157</h2>
                 <h3>Happy Clients</h3>
               </div>
             </div>
