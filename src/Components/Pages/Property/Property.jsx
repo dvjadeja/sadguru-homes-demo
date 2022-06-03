@@ -6,6 +6,7 @@ import Card from "../../Card/Card";
 import styles from "./Property.module.scss";
 // import { ID_CARD } from "../../../utils/Queries";
 import { ALL_DATA } from "../../../utils/data";
+import { motion } from "framer-motion";
 
 const Property = () => {
   let params = useParams();
@@ -67,8 +68,14 @@ const Property = () => {
 
   return (
     <main className={styles.flex}>
-      <Navbar />
-      <div className={styles.center}>{queryHandler()}</div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      >
+        <Navbar />
+        <div className={styles.center}>{queryHandler()}</div>
+      </motion.div>
     </main>
   );
 };

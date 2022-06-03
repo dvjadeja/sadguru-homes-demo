@@ -1,14 +1,16 @@
 import "./App.scss";
-import { Routes, Route } from "react-router-dom";
-import Home from "./Components/Pages/Home/Home";
+// import { Routes, Route } from "react-router-dom";
+// import Home from "./Components/Pages/Home/Home";
+// import Buy from "./Components/Pages/Buy/Buy";
+// import Rent from "./Components/Pages/Rent/Rent";
+// import Navbar from "./Components/Navbar/Navbar";
+// import Property from "./Components/Pages/Property/Property";
+// import Search from "./Components/Pages/Search/Search";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import Buy from "./Components/Pages/Buy/Buy";
-import Rent from "./Components/Pages/Rent/Rent";
-import Navbar from "./Components/Navbar/Navbar";
-import Property from "./Components/Pages/Property/Property";
-import Search from "./Components/Pages/Search/Search";
 import { SearchContext } from "./context/searchContext";
 import { useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import AnimatedRoute from "./Components/AnimatedRoute";
 
 const client = new ApolloClient({
   uri: "https://pacific-spire-46750.herokuapp.com/graphql",
@@ -17,7 +19,7 @@ const client = new ApolloClient({
 
 function App() {
   const [price, setPrice] = useState();
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("Choose a Location");
   const [searchData, setSearchData] = useState([]);
 
   return (
@@ -33,7 +35,7 @@ function App() {
     >
       <ApolloProvider client={client}>
         <div className="App">
-          <Routes>
+          {/* <Routes>
             <Route
               path="*"
               element={
@@ -52,7 +54,8 @@ function App() {
             <Route path="/property">
               <Route path=":propertyId" element={<Property />} />
             </Route>
-          </Routes>
+          </Routes> */}
+          <AnimatedRoute />
         </div>
       </ApolloProvider>
     </SearchContext.Provider>
