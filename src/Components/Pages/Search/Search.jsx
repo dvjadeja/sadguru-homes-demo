@@ -8,7 +8,6 @@ const Search = () => {
   const { searchData } = useContext(SearchContext);
   return (
     <main>
-      {console.log("SearchData in Search", searchData)}
       <Navbar />
       <div className={styles.content}>
         <h1>Your Dream Houses</h1>

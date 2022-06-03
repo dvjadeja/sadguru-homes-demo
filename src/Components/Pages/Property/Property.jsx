@@ -27,7 +27,7 @@ const Property = () => {
 
   useEffect(() => {
     filterData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const queryHandler = () => {
@@ -67,7 +67,6 @@ const Property = () => {
 
   return (
     <main className={styles.flex}>
-      {console.log(data[0])}
       <Navbar />
       <div className={styles.center}>{queryHandler()}</div>
     </main>

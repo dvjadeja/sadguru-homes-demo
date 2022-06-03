@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../../Navbar/Navbar";
 import styles from "./Section1.module.scss";
@@ -8,18 +8,28 @@ import { SearchContext } from "../../../../context/searchContext";
 
 const Section1 = () => {
   const ctxData = useContext(SearchContext);
+  const [city, setCity] = useState([]);
 
   const filterLocation = () => {
     const filteredData = ALL_DATA.filter(
       (item) => item.city === ctxData.location
     );
-    console.log(filteredData);
     ctxData.setSearchData(filteredData);
   };
 
+  const getDistinctOptions = () => {
+    setCity(
+      ALL_DATA.map((item) => item.city).filter(
+        (value, index, self) => self.indexOf(value) === index
+      )
+    );
+  };
+  useEffect(() => {
+    getDistinctOptions();
+  }, []);
+
   return (
     <section className={styles.section_1}>
-      {console.log("Search Data", ctxData.searchData)}
       {/* NAVBAR */}
       <div className={styles.Navbar}>
         <Navbar BurgerColour={"whitesmoke"} />
@@ -48,8 +58,10 @@ const Section1 = () => {
                 placeholder="Choose a Location"
                 onChange={(e) => ctxData.setLocation(e.target.value)}
               >
-                {ALL_DATA.map((item, index) => (
-                  <option value={item.city}>{item.city}</option>
+                {city.map((item, index) => (
+                  <option key={index} value={item}>
+                    {item}
+                  </option>
                 ))}
               </select>
             </div>
