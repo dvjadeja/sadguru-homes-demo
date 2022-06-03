@@ -15,6 +15,7 @@ export const BUY_DATA = [
     bedrooms: 3,
     bathrooms: 3,
     shortAndress: "ATH",
+    category: "Buy",
     price: 150000,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -29,6 +30,7 @@ export const BUY_DATA = [
     bedrooms: 7,
     bathrooms: 3,
     shortAndress: "THS",
+    category: "Buy",
     price: 200000,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -43,6 +45,7 @@ export const BUY_DATA = [
     bedrooms: 3,
     bathrooms: 1,
     shortAndress: "PTR",
+    category: "Buy",
     price: 125000,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -60,6 +63,7 @@ export const RENT_DATA = [
     bedrooms: 3,
     bathrooms: 3,
     shortAndress: "ATH",
+    category: "Rent",
     rent: 1500,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -74,6 +78,7 @@ export const RENT_DATA = [
     bedrooms: 7,
     bathrooms: 3,
     shortAndress: "THS",
+    category: "Rent",
     rent: 2000,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -88,6 +93,7 @@ export const RENT_DATA = [
     bedrooms: 3,
     bathrooms: 1,
     shortAndress: "PTR",
+    category: "Rent",
     rent: 1250,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -105,6 +111,7 @@ export const ALL_DATA = [
     bedrooms: 3,
     bathrooms: 3,
     shortAndress: "ATH",
+    category: "Buy",
     price: 150000,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -119,6 +126,7 @@ export const ALL_DATA = [
     bedrooms: 7,
     bathrooms: 3,
     shortAndress: "THS",
+    category: "Buy",
     price: 200000,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -133,6 +141,7 @@ export const ALL_DATA = [
     bedrooms: 3,
     bathrooms: 1,
     shortAndress: "PTR",
+    category: "Buy",
     price: 125000,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -147,6 +156,7 @@ export const ALL_DATA = [
     bedrooms: 3,
     bathrooms: 3,
     shortAndress: "ATH",
+    category: "Rent",
     rent: 1500,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -161,6 +171,7 @@ export const ALL_DATA = [
     bedrooms: 7,
     bathrooms: 3,
     shortAndress: "THS",
+    category: "Rent",
     rent: 2000,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",
@@ -175,6 +186,7 @@ export const ALL_DATA = [
     bedrooms: 3,
     bathrooms: 1,
     shortAndress: "PTR",
+    category: "Rent",
     rent: 1250,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque veniam illum hic. Neque, harum similique cum, enim non voluptas dolores sunt beatae maiores, delectus sapiente suscipit. Consequatur, aliquid dolor? Atque alias quisquam eius blanditiis inventore ex rem accusantium culpa incidunt dolore ea aliquam commodi ipsa, rerum, nisi cum assumenda labore soluta dignissimos praesentium quidem animi enim. Blanditiis, sit earum?",

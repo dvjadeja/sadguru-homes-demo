@@ -39,7 +39,7 @@ const Property = () => {
           secondClass={styles.card}
           info={{
             id: data.id,
-            category: "Buy/Rent",
+            category: data.category,
             imageSource: data?.imageSource,
             city: `${data.city}`,
             neighbourhood: `${data.neighbourhood}`,

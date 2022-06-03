@@ -1,17 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../../Navbar/Navbar";
 import styles from "./Section1.module.scss";
 import building1 from "../../../../assets/building1.jpg";
+import { ALL_DATA } from "../../../../utils/data";
+import { SearchContext } from "../../../../context/searchContext";
 
 const Section1 = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [price, setPrice] = useState("<100k");
-  // eslint-disable-next-line no-unused-vars
-  const [location, setLocation] = useState("");
+  const ctxData = useContext(SearchContext);
+
+  const filterLocation = () => {
+    const filteredData = ALL_DATA.filter(
+      (item) => item.city === ctxData.location
+    );
+    console.log(filteredData);
+    ctxData.setSearchData(filteredData);
+  };
 
   return (
     <section className={styles.section_1}>
+      {console.log("Search Data", ctxData.searchData)}
       {/* NAVBAR */}
       <div className={styles.Navbar}>
         <Navbar BurgerColour={"whitesmoke"} />
@@ -35,11 +43,15 @@ const Section1 = () => {
             {/* LOCATION */}
             <div className={styles.location_container}>
               <span>Location</span>
-              <input
+              <select
                 type="text"
-                placeholder="Enter a Location"
-                onChange={(e) => setLocation(e.target.value)}
-              />
+                placeholder="Choose a Location"
+                onChange={(e) => ctxData.setLocation(e.target.value)}
+              >
+                {ALL_DATA.map((item, index) => (
+                  <option value={item.city}>{item.city}</option>
+                ))}
+              </select>
             </div>
 
             {/* Price Range */}
@@ -48,7 +60,7 @@ const Section1 = () => {
               <select
                 name="Price"
                 id="price"
-                onChange={(e) => setPrice(e.target.value)}
+                onChange={(e) => ctxData.setPrice(e.target.value)}
               >
                 <option value="<100k">{`<100k`}</option>
                 <option value="100k-200k">100k-200k</option>
@@ -58,7 +70,7 @@ const Section1 = () => {
             </div>
 
             {/* Search Button */}
-            <button className={styles.btn_search}>
+            <button onClick={filterLocation} className={styles.btn_search}>
               <Link to="search">Search</Link>
             </button>
           </div>
