@@ -1,11 +1,4 @@
 import "./App.scss";
-// import { Routes, Route } from "react-router-dom";
-// import Home from "./Components/Pages/Home/Home";
-// import Buy from "./Components/Pages/Buy/Buy";
-// import Rent from "./Components/Pages/Rent/Rent";
-// import Navbar from "./Components/Navbar/Navbar";
-// import Property from "./Components/Pages/Property/Property";
-// import Search from "./Components/Pages/Search/Search";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { SearchContext } from "./context/searchContext";
 import { useState } from "react";

@@ -2,13 +2,13 @@ import React from "react";
 import Navbar from "../../Navbar/Navbar";
 import styles from "./Buy.module.scss";
 import Card from "../../Card/Card";
-import { BUY_DATA } from "../../../utils/data";
+// import { BUY_DATA } from "../../../utils/data";
 import { motion } from "framer-motion";
-// import { useQuery } from "@apollo/client";
-// import { BUY_CARDS } from "../../../utils/Queries";
+import { useQuery } from "@apollo/client";
+import { BUY_CARDS } from "../../../utils/Queries";
 
 const Buy = () => {
-  // const { loading, data, error } = useQuery(BUY_CARDS);
+  const { loading, data, error } = useQuery(BUY_CARDS);
   return (
     <main>
       <motion.div
@@ -21,31 +21,31 @@ const Buy = () => {
           <h1>Houses For Sale</h1>
           {/* CARDS */}
           <div className={styles.card}>
-            {/* {loading || error ? (
-            <h1 style={{ color: "#333" }}>Loading</h1>
-          ) : ( */}
-            <div className={styles.cards}>
-              {BUY_DATA.map((house, index) => (
-                <Card
-                  key={index}
-                  secondClass={styles.card}
-                  info={{
-                    id: house.id,
-                    category: "Buy",
-                    imageSource: house.imageSource,
-                    city: `${house.city}`,
-                    neighbourhood: `${house.neighbourhood}`,
-                    street: `${house.street}`,
-                    rooms: `${house.rooms}`,
-                    bedrooms: `${house.bedrooms}`,
-                    bathrooms: `${house.bathrooms}`,
-                    shortAndress: `${house.shortAndress}`,
-                    price: `${house.price}`,
-                  }}
-                />
-              ))}
-            </div>
-            {/* )} */}
+            {loading || error ? (
+              <h1 style={{ color: "#333" }}>Loading</h1>
+            ) : (
+              <div className={styles.cards}>
+                {data.houses.data.map((house, index) => (
+                  <Card
+                    key={index}
+                    secondClass={styles.card}
+                    info={{
+                      id: house.id,
+                      category: "Buy",
+                      imageSource: `${house.attributes.Preview_Image.data.attributes.url}`,
+                      city: `${house.attributes.location.data.attributes.City}`,
+                      neighbourhood: `${house.attributes.Neighbourhood}`,
+                      street: `${house.attributes.Street}`,
+                      rooms: `${house.attributes.Rooms}`,
+                      bedrooms: `${house.attributes.Bedrooms}`,
+                      bathrooms: `${house.attributes.Bathrooms}`,
+                      shortAndress: `${house.attributes.Short_Andress}`,
+                      price: `${house.attributes.Price}`,
+                    }}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </motion.div>

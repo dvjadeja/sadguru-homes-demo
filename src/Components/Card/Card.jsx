@@ -9,18 +9,18 @@ import building3 from "../../assets/building3.jpg";
 import { Link } from "react-router-dom";
 
 const Card = ({ info, showInfo, secondClass }) => {
-  // CONVERT PRICE FUNC
-  const convertPrice = (price) => {
-    if (price >= 1000 && price < 999999) return `${price / 1000}k `;
-    if (price >= 1000000) return `${price / 1000000}m `;
-    return price;
-  };
+  // // CONVERT PRICE FUNC
+  // const convertPrice = (price) => {
+  //   if (price >= 1000 && price < 999999) return `${price / 1000}k `;
+  //   if (price >= 1000000) return `${price / 1000000}m `;
+  //   return price;
+  // };
 
-  //   CONVERT RENT FUNC
-  const convertRent = (rent) => {
-    if (rent >= 1000) return `${rent / 1000}k `;
-    return rent;
-  };
+  // //   CONVERT RENT FUNC
+  // const convertRent = (rent) => {
+  //   if (rent >= 1000) return `${rent / 1000}k `;
+  //   return rent;
+  // };
 
   return (
     <div className={`${styles.card_container} ${secondClass}`}>
@@ -73,12 +73,12 @@ const Card = ({ info, showInfo, secondClass }) => {
         <div className={styles.card_buy}>
           {/* PRICES */}
           <div className={styles.prices}>
-            <h2
+            {/* <h2
               style={showInfo.price ? {} : { display: "none" }}
             >{`${convertPrice(info.price)}$`}</h2>
             <h2
               style={showInfo.rent ? {} : { display: "none" }}
-            >{`${convertRent(info.rent)}$/month`}</h2>
+            >{`${convertRent(info.rent)}$/month`}</h2> */}
           </div>
 
           {/* SEE MORE BUTTON */}

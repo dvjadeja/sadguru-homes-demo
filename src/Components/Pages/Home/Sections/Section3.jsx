@@ -5,55 +5,12 @@ import Carousel from "../../../Carousel/Carousel";
 
 import { SwiperSlide } from "swiper/react";
 import Card from "../../../Card/Card";
-// import { useQuery, gql } from "@apollo/client";
-import { BUY_DATA } from "../../../../utils/data";
-
-// const CARD_DATA = gql`
-//   query GET_CARDS {
-//     houses(
-//       filters: { categories: { Category: { contains: "Buy" } } }
-//       pagination: { limit: 6 }
-//     ) {
-//       data {
-//         id
-//         attributes {
-//           location {
-//             data {
-//               attributes {
-//                 City
-//               }
-//             }
-//           }
-//           Preview_Image {
-//             data {
-//               attributes {
-//                 url
-//               }
-//             }
-//           }
-//           categories {
-//             data {
-//               attributes {
-//                 Category
-//               }
-//             }
-//           }
-//           Street
-//           Rooms
-//           Bedrooms
-//           Bathrooms
-//           Price
-//           Rent
-//           Short_Andress
-//           Neighbourhood
-//         }
-//       }
-//     }
-//   }
-// `;
+import { useQuery } from "@apollo/client";
+import { BUY_CARDS } from "../../../../utils/Queries";
+// import { BUY_DATA } from "../../../../utils/data";
 
 const Section3 = () => {
-  // const { loading, data, error } = useQuery(CARD_DATA);
+  const { loading, data, error } = useQuery(BUY_CARDS);
   return (
     <section className={styles.section_3}>
       <div className={styles.section_3_title}>
@@ -64,35 +21,35 @@ const Section3 = () => {
       {/* CARDS/ CAROUSEL */}
       <div className={styles.cards}>
         <Carousel>
-          {/* {loading || error ? (
+          {loading || error ? (
             <>
               <SwiperSlide>
                 <Card />
               </SwiperSlide>
             </>
-          ) : ( */}
-          <>
-            {BUY_DATA.map((house, index) => (
-              <SwiperSlide key={index}>
-                <Card
-                  info={{
-                    id: house.id,
-                    category: "Buy",
-                    imageSource: house.imageSource,
-                    city: `${house.city}`,
-                    neighbourhood: `${house.neighbourhood}`,
-                    street: `${house.street}`,
-                    rooms: `${house.rooms}`,
-                    bedrooms: `${house.bedrooms}`,
-                    bathrooms: `${house.bathrooms}`,
-                    shortAndress: `${house.shortAndress}`,
-                    price: `${house.price}`,
-                  }}
-                />
-              </SwiperSlide>
-            ))}
-          </>
-          {/* )} */}
+          ) : (
+            <>
+              {data.houses.data.map((house, index) => (
+                <SwiperSlide key={index}>
+                  <Card
+                    info={{
+                      id: house.id,
+                      category: "Buy",
+                      imageSource: `${house.attributes.Preview_Image.data.attributes.url}`,
+                      city: `${house.attributes.location.data.attributes.City}`,
+                      neighbourhood: `${house.attributes.Neighbourhood}`,
+                      street: `${house.attributes.Street}`,
+                      rooms: `${house.attributes.Rooms}`,
+                      bedrooms: `${house.attributes.Bedrooms}`,
+                      bathrooms: `${house.attributes.Bathrooms}`,
+                      shortAndress: `${house.attributes.Short_Andress}`,
+                      price: `${house.attributes.Price}`,
+                    }}
+                  />
+                </SwiperSlide>
+              ))}
+            </>
+          )}
         </Carousel>
       </div>
     </section>

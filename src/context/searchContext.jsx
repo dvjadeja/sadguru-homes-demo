@@ -7,6 +7,7 @@ const SearchContext = createContext({
   price: Number,
   setLocation: String,
   location: String,
+  city: [],
 });
 
 export { SearchContext };
