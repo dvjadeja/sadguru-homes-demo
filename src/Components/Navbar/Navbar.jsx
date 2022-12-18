@@ -61,6 +61,7 @@ const Navbar = ({ BurgerColour }) => {
           <MenuLink url="rent" path="Rent" />
           <MenuLink url="search" path="Search" />
           <MenuLink url="about" path="About" />
+          <MenuLink url="team" path="Our Team" />
           <Link to="/auth" className={styles.login}>
             <span>Login</span>
           </Link>

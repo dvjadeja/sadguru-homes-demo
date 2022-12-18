@@ -6,6 +6,8 @@ import Home from "./Pages/Home/Home";
 import Property from "./Pages/Property/Property";
 import Rent from "./Pages/Rent/Rent";
 import Search from "./Pages/Search/Search";
+import About from "./Pages/About/About";
+import Team from "./Pages/Team/Team";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -32,6 +34,8 @@ const AnimatedRoute = () => {
         <Route path="/property">
           <Route path=":propertyId" element={<Property />} />
         </Route>
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
     </AnimatePresence>
   );

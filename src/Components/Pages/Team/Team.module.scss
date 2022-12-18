@@ -1,0 +1,159 @@
+.mainSection {
+  padding-bottom: 2.5rem;
+  padding-top: 5rem;
+
+  @media screen and (min-width: 960px) {
+    padding-top: 120px;
+    padding-bottom: 5rem;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+
+    @media screen and (min-width: 400px) {
+      max-width: 400px;
+    }
+
+    @media screen and (min-width: 540px) {
+      max-width: 540px;
+    }
+
+    @media screen and (min-width: 720px) {
+      max-width: 720px;
+    }
+
+    @media screen and (min-width: 960px) {
+      max-width: 960px;
+    }
+
+    @media screen and (min-width: 1140px) {
+      max-width: 1140px;
+    }
+    @media screen and (min-width: 1320px) {
+      max-width: 1320px;
+    }
+
+    .headerContainer {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -1rem;
+      margin-right: -1rem;
+
+      .header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+
+        .headerText {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 60px;
+          max-width: 510px;
+          text-align: center;
+
+          h2 {
+            margin-bottom: 1rem;
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            font-weight: 700;
+
+            @media screen and (min-width: 540px) {
+              font-size: 2.25rem;
+              line-height: 2.5rem;
+            }
+
+            @media screen and (min-width: 720px) {
+              font-size: 40px;
+              line-height: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .teams {
+      //   margin-left: -1rem;
+      //   margin-right: -1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .profileContainer {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @media screen and (min-width: 720px) {
+          width: 50%;
+        }
+
+        @media screen and (min-width: 1140px) {
+          width: 25%;
+        }
+
+        .profile_view {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 2.5rem;
+          width: 100%;
+          max-width: 370px;
+
+          .singleProfile {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+
+            .profileImg {
+              display: block;
+              vertical-align: middle;
+              max-width: 100%;
+              height: auto;
+              width: 100%;
+            }
+
+            .dContainer {
+              position: absolute;
+              bottom: 1.25rem;
+              left: 0;
+              width: 100%;
+              text-align: center;
+
+              .dBody {
+                position: relative;
+                margin-left: 1.25rem;
+                margin-right: 1.25rem;
+                overflow: hidden;
+                border-radius: 0.5rem;
+                background-color: rgb(255, 255, 255 / 1);
+                padding: 0.5rem 0.75rem;
+                box-shadow: 6px 7px 13px 0px rgba(0, 0, 0, 0.5);
+
+                @media screen and (min-width: 768px) {
+                  padding: 1rem 0.75rem;
+                }
+
+                @media screen and (min-width: 960px) {
+                  padding: 1.15rem 0.75rem;
+                }
+
+                .dTitle {
+                  font-size: 1rem;
+                  line-height: 1.5rem;
+                }
+
+                .designation {
+                  font-size: 0.875rem;
+                  line-height: 1.25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
